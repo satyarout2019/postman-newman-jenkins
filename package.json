@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Project for API test",
+   "directories":{
+   "test": "tests"
+   },
+  "scripts": {
+    "api-tests-production": "newman run API/B&R_Group_API.postman_collection.jaon"
+  },
+  "author": "satya",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.5.5"
+  }
+}

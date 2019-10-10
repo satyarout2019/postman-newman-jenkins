@@ -1,0 +1,298 @@
+{
+	"variables": [],
+	"info": {
+		"name": "B&R Group API",
+		"_postman_id": "03703667-5315-2289-5a40-181ec4263f45",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"url": "https://192.168.0.168:8390/darkserverAdmin/rest/user/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "localhost:8345",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "https://localhost:8345/",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "https://localhost:8345/",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"userId\":\"shiva1234\",\n\t\t\"usercred\":\"71afe413ed9b09bb3c6fd4c6ef94183b64c07c37ae3b714c145f507d0765693c396933a87811dde637c874ad181b4073fb22ce4d5f1be72710c698ef7a24bd72\"\n\t}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create groups",
+			"request": {
+				"url": "https://192.168.0.168:8390/darkBackupServer/rest/admin/groups",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "ayHu_M_78TOHMzY0Yzk0ZDgtNWQ0NC00MTY1LWIxZjItOWI3MzUwOWFhYTZm",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"neeraj\",\n  \"description\": \"hjffyyj\",\n  \"parentGroupId\": 1\n}"
+				},
+				"description": "groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Get groups details",
+			"request": {
+				"url": "https://192.168.0.168:8390/darkBackupServer/rest/admin/groups/103",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eY1JErJcQi3OYmM0YTcwZDMtYjhhZS00ZGQ3LWJlOGMtMTFlOTM5MGU3Y2Qx",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"neeraj\",\n  \"description\": \"test case\",\n  \"parentGroupId\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get a list of group",
+			"request": {
+				"url": "https://192.168.0.168:8390/darkBackupServer/rest/admin/grouplist",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "IiYRPG-PEB_8Nzg3Yjc3OGMtZTg5Yy00NDBiLTgzNWItYzY1OTA2ZDVlYjJh",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a group",
+			"request": {
+				"url": "https://192.168.0.168:8390/darkBackupServer/rest/admin/groups/119",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "LzePq1gkxT2EMmI0ZGYyNzAtODljOS00OTViLWI5MTctZDVmZmM2YTk1YTkw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Associate user with group",
+			"request": {
+				"url": "https://192.168.0.243:4200/darkBackupServer/rest/admin/groups/2/user",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type\n",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "KhvHPAok_2aJOWI5ZWIzZWEtMTEzNC00ZjQyLWIxYmItMGQ0NDU1NDY4Yzhh",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[3 ,5 ,6, 7, 8,9]"
+				},
+				"description": "Associate user with group"
+			},
+			"response": []
+		},
+		{
+			"name": "Get userlist",
+			"request": {
+				"url": "https://192.168.0.243:4200/darkBackupServer/rest/admin/userlist",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "uWz9V5V_H20aZWYzNWU3MjItYWJkZC00NDcwLTljNDEtMDM3ZWRjODViNzRl",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Search groups",
+			"request": {
+				"url": {
+					"raw": "https://192.168.0.243:4200/darkBackupServer/rest/admin/groups/search?groupName=nee",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"243"
+					],
+					"port": "4200",
+					"path": [
+						"darkBackupServer",
+						"rest",
+						"admin",
+						"groups",
+						"search"
+					],
+					"query": [
+						{
+							"key": "groupName",
+							"value": "nee",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "oZAo_oCNwLppMzkwYzMzMzMtY2IyNC00YmU5LTgyNWUtYjFiMDQ4YWFiMjNl",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update group",
+			"request": {
+				"url": "https://192.168.0.243:4200/darkBackupServer/rest/admin/groups",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "2L5C3R-VbvOzNjNkOGY2NDItNjYwOS00NmYyLThlY2EtNjMzMmU2YjVhYjc2",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 73,\n\n\"parentGroupId\": 1,\n\n  \"name\": \"neeraj bhau\",\n  \"description\": \"updated\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
